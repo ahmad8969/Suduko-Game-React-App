@@ -1,0 +1,19 @@
+.button_block button{
+    height: 50px !important;
+    width: 50px !important;
+    background-image: url('../images/wood.jpg');
+    /* background-color: aquamarine !important; */
+    margin: 0!important;
+    font-size: 20px!important;
+    font-weight:600
+}
+.nine_block_Style{
+    height: 150px !important;
+    width: 150px !important;
+    border:2px solid rgb(245, 154, 7) !important;
+    display: grid;
+    margin: 0!important;
+    grid-template-columns:repeat(3,1fr)!important;
+    grid-column-gap: 0px !important;
+    grid-row-gap: 0px !important;
+}

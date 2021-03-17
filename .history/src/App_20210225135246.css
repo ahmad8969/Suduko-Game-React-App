@@ -1,0 +1,22 @@
+.App {
+  text-align: center;
+  /* display: flex; */
+}
+.board_nine_block_Style{
+  height: 580px !important;
+  width: 580px !important;
+  border:2px solid black !important;
+
+  display: grid;
+  grid-template-columns:repeat(3,1fr)!important;
+}
+  
+
+/* @keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */

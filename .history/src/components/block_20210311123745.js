@@ -1,0 +1,73 @@
+import React, {useState} from 'react';
+
+import './block.css';
+
+
+const Block = ({rowId,colId,keys,value})=>{
+    var uniqueId = `${rowId}`+ `${colId}` ;
+    const[value, setValue]= useState()
+    const[isClicked, setIsClicked]= useState(false);
+    let [counter, setCounter]= useState(0);
+
+    
+    
+    
+    // const changeState = (e) => {
+    //     setCounter(counter+1);
+        
+    //     if(counter == 0){
+    //         props.click();
+    //     setIsClicked(!isClicked);
+    //     console.log(counter)
+    //     }
+    //     else if(counter > 0){
+    //         console.log(counter)
+    //         alert("jfksjfkjsalj")
+    //         return;
+    //     }
+        
+    // }
+    const onChangeHandler = (e) =>{
+        let getting_Current_Value = e.target.value;
+        console.log(getting_Current_Value);
+        setValue(getting_Current_Value)
+    }
+    const onKeyUpHandler = (e) =>{
+        
+        
+        if(e.keyCode ===13){
+            if(e.target.value ===''){
+                alert("fill this");
+            }else{ 
+            setIsClicked(!isClicked);
+        }
+        }
+    }
+    const onFocusOuts = (e) =>{
+        let previousValue = e.target.value;
+        console.log(previousValue);
+            if(previousValue === ''){
+                setValue(value);
+            }else{
+                setValue(previousValue);
+            }
+        
+    }
+
+    if(isClicked){
+        return <input className="inputStyle" value={value}  
+         onKeyUp={(e)=>{onKeyUpHandler(e)}}
+         onChange={(e) => {onChangeHandler(e)}}
+         onBlur={(e) => {onFocusOuts(e)}}
+          type="text"/>;
+    }
+
+return(
+    <div className="button_block">
+    <button id={keys} onClick={(e)=>{click(keys, rowId, colId)}} value={value}> {value}</button>
+    </div>
+    
+)
+}
+
+export default Block;

@@ -1,0 +1,14 @@
+.button_block button{
+    height: 50px !important;
+    width: 50px !important;
+    background-color: aquamarine !important;
+}
+.nine_block_Style{
+    height: 200px !important;
+    width: 200px !important;
+    border:2px solid black !important;
+    display: grid;
+    grid-template-columns:repeat(3,1fr)!important;
+    grid-column-gap: 0px !important;
+    grid-row-gap: 0px !important;
+}

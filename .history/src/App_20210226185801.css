@@ -1,0 +1,43 @@
+@import url('http://fonts.cdnfonts.com/css/game');
+.App {
+  text-align: center;
+  background-image: url('images/download.jpg');
+  color:rgb(245, 154, 7);
+  padding-top:20px;
+  font-family: 'GAME', sans-serif;
+  /* display: flex; */
+   height: 100vh !important;
+  /* width: 490px !important; */
+  margin: 0 auto;
+ 
+}
+
+.board_nine_block_Style{
+  height: 460px !important;
+  width: 460px !important;
+  /* border:2px solid black !important; */
+  padding: 10px;
+  margin: 0 auto !important;
+  display: grid;
+  grid-column-gap: 0px !important;
+  grid-row-gap: 0px !important;
+  grid-template-row:repeat(3,1fr)!important;
+}
+.heading{
+  color: white;
+  text-align:center;
+  padding-top:50px!important;
+  /* margin-top: 10px!important; */
+  font-size: 30px;
+  
+}
+  
+
+/* @keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
